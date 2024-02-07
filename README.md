@@ -10,7 +10,7 @@ To use this stylesheet, paste all of the contents of the attached file on the "s
 Be sure to change the name of the first Class ‘CSS_Boilerplate‘ to the name of YOUR ContentModel.
 ![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/6361ff58-de77-4f20-98cb-99e49266749b)
 
-## Sepcial Classes
+## Special Classes
 
 Once done you’ll have access to a variety of special classes as follows:
 
