@@ -1,0 +1,131 @@
+/*!!!!CHANGE 'CSS_Boilerplate' TO YOUR CONTENT MODEL!!!!!*/
+.CSS_Boilerplate { width: auto !important; }
+/*DataModel Setup*/
+.DataModel {
+  display: flex;
+  flex-wrap: wrap;
+  transition: flex;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding-top:8px;
+  padding-left:8px !important;
+	margin:10px;
+	width:auto !important
+}
+/*Table Setup*/
+hr { display:none; }
+.caption { padding-right: 0.5em;  width: 95%;  order: 1; }
+.header { margin-right: 100%;  order: 1; }
+.scroll-container {  order: 1; max-height:1000px !important;}
+.scroll-container > div:first-child{ max-height:1000px !important; height:auto !important;}
+.footer { order:1; margin-right:auto; }
+/*Field Setup*/
+.DataField {  display: flex;  flex-direction: column;  margin-top: auto; order:1; }
+/*Section and Tables Styling*/
+.DataSection,.DataTable,.DataGridCollection {
+  display: flex;
+  flex-flow: wrap;
+  flex-basis: 100%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  transition: flex;
+  padding: 8px;
+  padding-right: 0px;
+  margin:8px;
+  margin-left:0px;
+  width: auto;
+  border: 1px solid gray;
+  border-radius: 8px;
+  order:1;
+}
+/*Correct flex properties just for tables*/
+.DataTable {	flex-direction:column;	flex-wrap:nowrap; }
+/*Makes MultiInstance Sections Look Normal*/
+.DataGridCollection > .DataSection { border: none; padding: 0px; margin: 0px; }
+.DataSection > .DataSection {  margin-left: 0px; height: auto; }
+/*Sets hover color*/
+.DataSection:hover, .DataTable:hover, .DataGridCollection:hover { 
+	border-color: lightgray; 
+}
+/*Sets focus color*/
+.DataSection:focus-within,.DataTable:focus-within,.DataGridCollection:focus-within {  
+	border-color: #27a7ad; 
+}
+/*SPECIAL CLASSES*/
+.SoftError > .invalid { background-color: #7f7f27; }
+.SoftError > .invalid:focus-within { border-color: #ffcc00;}
+.lite-mode .SoftError > .invalid { background-color: #feffbd; }
+.lite-mode .SoftError > .invalid:focus-within { border-color: Yellow; }
+.Secure > Input:hover{ filter: blur(3px);}
+.Secure > Input:focus-within { filter: none; }
+.Secure > Input:not(focus-within) { filter: blur(3px); }
+.Banner > label { display: none;}
+.Banner { width: 100%; }
+.Banner > input {
+  width: 100% !important;
+  padding-right: 0px;
+  color: var(--text-primary);
+  filter: brightness(0.8);
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+}
+.NoLabel > input { margin: 0px; }
+.NoLabel > label { display: none; }
+.NoLabel > .caption { display: none; }
+.NoLabel > .toolbar > div > .caption { display: none; }
+.NoBorder.DataGridCollection, .NoBorder.DataTable, .NoBorder.DataField, .NoBorder.DataSection { 
+	padding:0px !important; margin: 0px !important; border:0px !important; 
+}
+.NoBorder.DataModel {
+	border:none;
+	padding-left:0px !important;
+	margin-right:0px;
+}
+.Half { flex: 0 0 calc(50% - 8px); }
+.Third { flex: 0 0 calc(33.333% - 8px); }
+.Quarter { flex: 0 0 calc(25% - 8px); }
+.Fifth { flex: 0 0 calc(20% - 8px); }
+.TwoThirds { flex: 0 0 calc(66.666% - 8px); }
+.Column { flex-direction: column; flex-wrap: nowrap; }
+.Column > .DataField {  flex-direction: row;}
+.Column > .DataField > label {  padding-right: 5px; }
+.Column > .header { width: 0; margin-right: 100%; }
+.AutoSize > .scroll-container > div > table div {
+	height:fit-content !important;
+	max-height:fit-content !important;
+}
+@font-face {
+  font-family: "MesloLGS NF Regular";
+  src: url("../Fonts/MesloLGS-NF-Regular.ttf") format("truetype");
+}
+/*in progress*/
+.Icon { font-family: "MesloLGS NF Regular";  order: 0;}
+.Icon > label { font-size: x-large; }
+.Icon > input { display: none; }
+/*Makes section-add button blue*/
+button[id="delete-section"] { color: #1ebcc5; } /*Change off color*/
+/*LIGHT-MODE changes the confirmation color*/
+.lite-mode .confirmed {
+  background-color: rgb(105, 205, 180);
+} 
+select { position: relative; padding-left: 4px; }
+select[multiple] { height: 6em; }
+select:after {
+  content: "A\25BC";
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  /*transform: translateY(-30%);*/
+  pointer-events: none;
+}
+select::before {
+  content: "B";
+  z-index: 2;
+  top: 30%;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+  right: 0;
+  pointer-events: none;
+}
