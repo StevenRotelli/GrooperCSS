@@ -1,5 +1,5 @@
-/*!!!!CHANGE 'CSS_Boilerplate' TO YOUR CONTENT MODEL!!!!!*/
-.CSS_Boilerplate { width: auto !important; }
+/*Makes data panel full size*/
+.DataGridDocument { width: auto !important; }
 /*DataModel Setup*/
 .DataModel {
   display: flex;
