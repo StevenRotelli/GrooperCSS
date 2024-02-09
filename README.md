@@ -7,8 +7,6 @@ Boilerplate CSS that can be used with any Grooper DataModel
 To use this stylesheet, paste all of the contents of the attached file on the "stylesheet" property of your DataModel.
 
 ![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/a68d0698-54cb-493c-a6d8-9b8069b9e845)
-Be sure to change the name of the first Class ‘CSS_Boilerplate‘ to the name of YOUR ContentModel.
-![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/6361ff58-de77-4f20-98cb-99e49266749b)
 
 ## Special Classes
 
