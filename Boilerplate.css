@@ -85,16 +85,26 @@ hr { display:none; }
 .Half { flex: 0 0 calc(50% - 8px); }
 .Third { flex: 0 0 calc(33.333% - 8px); }
 .Quarter { flex: 0 0 calc(25% - 8px); }
+.OneFourth { flex: 0 0 calc(25% - 8px); }
+.ThreeFourths { flex: 0 0 calc(75% - 8px); }
 .Fifth { flex: 0 0 calc(20% - 8px); }
+.OneFifth { flex: 0 0 calc(20% - 8px); }
+.TwoFifths { flex: 0 0 calc(40% - 8px); }
+.ThreeFifths { flex: 0 0 calc(60% - 8px); }
+.OneThird { flex: 0 0 calc(33.333% - 8px); }
 .TwoThirds { flex: 0 0 calc(66.666% - 8px); }
 .Column { flex-direction: column; flex-wrap: nowrap; }
-.Column > .DataField {  flex-direction: row;}
+.Column > .DataField { flex-direction: row; }
 .Column > .DataField > label {  padding-right: 5px; }
 .Column > .header { width: 0; margin-right: 100%; }
 .AutoSize > .scroll-container > div > table div {
-	height:fit-content !important;
+	height:100% !important;
 	max-height:fit-content !important;
+	overflow-y:hidden;
 }
+.Shy {width:100%}
+.Shy > label{ width:fit-content; margin-right:auto;}
+.Shy > input {margin-right:8px;}
 @font-face {
   font-family: "MesloLGS NF Regular";
   src: url("../Fonts/MesloLGS-NF-Regular.ttf") format("truetype");
