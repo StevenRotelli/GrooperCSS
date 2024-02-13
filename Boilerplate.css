@@ -1,8 +1,12 @@
+/*VERSION 1.0.1*/
 /* Makes data panel full size */
+
 self {
   width: auto !important;
 }
+
 /* DataModel Setup */
+
 .DataModel {
   display: flex;
   flex-wrap: wrap;
