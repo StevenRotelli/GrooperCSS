@@ -1,4 +1,4 @@
-![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/4f8e7e7e-844f-473c-998a-3d51e487f8ea) ![image](https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png)
+<img src="https://github.com/StevenRotelli/GrooperCSS/assets/95944145/4f8e7e7e-844f-473c-998a-3d51e487f8ea" > <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">
 
 ![Chrome](https://img.shields.io/badge/Chrome-compatible-green.svg)
 ![Edge](https://img.shields.io/badge/Edge-compatible-green.svg)
