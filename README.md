@@ -8,26 +8,25 @@
 
 This repository contains a CSS stylesheet designed to enhance the appearance and usability of Grooper DataModels. The stylesheet provides a modern, visually appealing interface that can be easily integrated with any Grooper DataModel.
 
+### Preview with the [TokyoNight](https://github.com/StevenRotelli/GrooperCSS/Themes/TokyoNight.css) theme.
+![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/16b91ed2-59b8-4729-9ef3-770018c5792c)
+
 ## Usage
 
 To apply this stylesheet to your DataModel, follow these simple steps:
 
 1. Navigate to the latest [release page](https://github.com/StevenRotelli/GrooperCSS/releases/latest) for the latest stable version.
-2. Download the `Zip` file from the repository.
-3. Open your Grooper Project in the Grooper Design Studio Page.
-4. Drag and Drop
-5. Paste the contents of the `grooper-datamodel-stylesheet.css` file into the "stylesheet" property.
+1. Open your Grooper Project in the Grooper Design Studio Page.
+1. Drag and Drop the `Boilerplace.css` into a Grooper Project ![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/8f010403-beef-4717-84ff-d4b79e31e25b)
+ or project folder.
    
 ### Visual Guide
 
-Below are visual aids to assist you in applying the stylesheet to your DataModel:
+For more detailed instructions and additional information on customizing the stylesheet for your specific needs, please refer to our this Git Repository's [Wiki](https://github.com/StevenRotelli/GrooperCSS/wiki). 
 
+For general Grooper information, please visit our official [Grooper Wiki](https://wiki.grooper.com/).
 
-1. **Applying the Stylesheet in Grooper**
-
-![Apply Stylesheet](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/a68d0698-54cb-493c-a6d8-9b8069b9e845)
-
-For more detailed instructions and additional information on customizing the stylesheet for your specific needs, please refer to our this Git Repository's [Wiki](https://github.com/StevenRotelli/GrooperCSS/wiki). For general Grooper information, please visit our official [Grooper Wiki](https://wiki.grooper.com/).
+---
 
 ## Reporting Issues
 
