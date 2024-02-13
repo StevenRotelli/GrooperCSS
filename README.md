@@ -31,8 +31,8 @@ For more detailed instructions and additional information on customizing the sty
 
 ## Reporting Issues
 
-Check Existing Issues: Before submitting a new issue, please review the existing issues to avoid duplicates. If you find an issue that matches yours, feel free to add a comment to provide additional information or indicate that you're experiencing the same problem.
-Provide Detailed Information: When creating a new issue, please provide as much relevant information as possible. This includes a clear description of the issue, steps to reproduce it, any error messages, and the expected versus actual behavior. If possible, include screenshots or code snippets to help illustrate the problem.
+1. Check Existing Issues: Before submitting a new issue, please review the existing issues to avoid duplicates. If you find an issue that matches yours, feel free to add a comment to provide additional information or indicate that you're experiencing the same problem.
+1. Provide Detailed Information: When creating a new issue, please provide as much relevant information as possible. This includes a clear description of the issue, steps to reproduce it, any error messages, and the expected versus actual behavior. If possible, include screenshots or code snippets to help illustrate the problem.
 
 ## Submitting Bug Reports
 
@@ -41,11 +41,10 @@ If you've identified a specific bug and would like to report it, please follow t
 1. Use the Bug Report Template: When you create a new issue, select the Bug Report template if available. This template will prompt you for specific details that are helpful in diagnosing and fixing bugs.
 1. Describe the Bug: Provide a clear and concise description of what the bug is, including what you expected to happen and what actually happened.
 1. Steps to Reproduce: List the steps to reproduce the behavior. An example sequence might look like this:
-
-Go to '...'
-Click on '....'
-Scroll down to '....'
-See error
+   - Go to '...'
+   - Click on '....'
+   - Scroll down to '....'
+   - See error
 1. Environment Details: Include details about your environment where the bug was observed, such as the browser version, operating system, and any relevant software or hardware configurations.
 1. Additional Context: Add any other context about the problem here, such as links to related issues, external resources, or possible solutions/workarounds you've identified.
 
