@@ -1,0 +1,37 @@
+self {
+    background-color: #282828; /* Gruvbox dark background */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #fe8019; /* Gruvbox orange for highlights and accents */
+}
+.DataValue::placeholder {
+    color: #928374; /* Gruvbox faded text color for less emphasis */
+}
+.DataModel {
+    background-color: #3c3836; /* Gruvbox dark gray for alternate backgrounds */
+}
+.DataGridCollection, .DataTable, .DataSection {
+    border-color: #d65d0e; /* Gruvbox dark orange for borders */
+    background-color: #3c3836; /* Gruvbox dark gray for alternate backgrounds */
+}
+.DataSection:hover, .DataTable:hover, .DataGridCollection:hover, .DataValue:hover, input:hover { 
+    border-color: #b8bb26; /* Gruvbox yellow for creative accents */
+}
+.DataSection:focus-within, .DataTable:focus-within, .DataGridCollection:focus-within, .DataValue:focus-within {  
+    border-color: #fb4934; /* Gruvbox bright red for urgent or important accents */
+}
+.caption, label {
+    color: #ebdbb2; /* Gruvbox light text color for foreground elements */
+}
+.invalid, .dg-error-list {
+    background-color: #fb4934; /* Gruvbox red for errors, warnings */
+}
+.SoftError > .invalid {
+    background-color: #fabd2f; /* Gruvbox yellow for warnings, notices */
+}
+.confirmed {
+    background-color: #b8bb26; /* Gruvbox green for success messages, buttons */
+}
+button[id="delete-section"] {
+    color: #83a598; /* Gruvbox aqua for links and buttons */
+}
