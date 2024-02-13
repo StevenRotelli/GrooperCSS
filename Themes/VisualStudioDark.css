@@ -1,0 +1,37 @@
+self {
+    background-color: #1e1e1e; /* Main background color, very dark gray */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #3a3d41; /* Scrollbar color, dark gray */
+}
+.DataValue::placeholder {
+    color: #d4d4d4; /* Placeholder text color, light gray for contrast */
+}
+.DataModel {
+    background-color: #252526; /* Alternate background color, slightly lighter dark gray */
+}
+.DataGridCollection, .DataTable, .DataSection {
+    border-color: #3f3f46; /* Border color, dark gray to subtly define edges */
+    background-color: #252526; /* Alternate background color, for sections and tables */
+}
+.DataSection:hover, .DataTable:hover, .DataGridCollection:hover, .DataValue:hover, input:hover { 
+    border-color: #007acc; /* Highlight color, bright blue for hover states */
+}
+.DataSection:focus-within, .DataTable:focus-within, .DataGridCollection:focus-within, .DataValue:focus-within {  
+    border-color: #569cd6; /* Focus color, softer blue to indicate focus without overwhelming */
+}
+.caption, label {
+    color: #dcdcdc; /* Foreground text color, soft white for readability */
+}
+.invalid, .dg-error-list {
+    background-color: #d16969; /* Error color, soft red for visibility without harshness */
+}
+.SoftError > .invalid {
+    background-color: #ce9178; /* Warning color, a muted orange for differentiation */
+}
+.confirmed {
+    background-color: #608b4e; /* Success color, a muted green for positive feedback */
+}
+button[id="delete-section"] {
+    color: #569cd6; /* Button and link color, matching the focus state for consistency */
+}
