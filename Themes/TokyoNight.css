@@ -1,0 +1,34 @@
+self {
+	background-color: #1a1b26; /* Deep blue background */
+}
+.DataValue::placeholder {
+	color: #a9b1d6; /* Dimmed text color for less emphasis */
+}
+.DataModel {
+		background-color: #24283b; /* Slightly lighter blue for alternate backgrounds */
+	--tokyo-night-cyan: #7dcfff; /* Cyan for highlights and accents */
+}
+.DataGridCollection, .DataTable, .DataSection {
+	border-color: #33467C; /* Border color for elements */
+}
+.DataSection:hover, .DataTable:hover, .DataGridCollection:hover, .DataValue:hover, input:hover{ 
+	border-color: #bb9af7; /* Purple for creative accents */
+}
+.DataSection:focus-within,.DataTable:focus-within,.DataGridCollection:focus-within, .DataValue:focus-within {  
+	border-color: #f7768e; /* Pink for urgent or important accents */
+}
+.caption, label {
+	color: #c0caf5; /* Light foreground text color */
+}
+.invalid, .dg-error-list {
+	background-color: #f7768e; /* Red for errors, warnings */
+}
+.SoftError > .invalid {
+	background-color: #e0af68; /* Yellow for warnings, notices */
+}
+.confirmed {
+	background-color: #9ece6a; /* Green for success messages, buttons */	
+}
+button[id="delete-section"] { 
+	color: #7aa2f7; /* Blue for links and buttons */
+}
