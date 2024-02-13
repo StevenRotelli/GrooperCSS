@@ -1,0 +1,37 @@
+self {
+    background-color: #282a36; /* Dracula background color */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #6272a4; /* Dracula comment color, used here for scrollbar thumb for a subtle look */
+}
+.DataValue::placeholder {
+    color: #6272a4; /* Dracula comment color, for placeholder text to give it a subtle appearance */
+}
+.DataModel {
+    background-color: #44475a; /* Dracula selection color, for alternate backgrounds */
+}
+.DataGridCollection, .DataTable, .DataSection {
+    border-color: #50fa7b; /* Dracula green, used for borders to add vibrancy */
+    background-color: #44475a; /* Dracula selection color, for alternate backgrounds */
+}
+.DataSection:hover, .DataTable:hover, .DataGridCollection:hover, .DataValue:hover, input:hover { 
+    border-color: #ff79c6; /* Dracula pink, for hover states to make elements stand out */
+}
+.DataSection:focus-within, .DataTable:focus-within, .DataGridCollection:focus-within, .DataValue:focus-within {  
+    border-color: #8be9fd; /* Dracula cyan, for focus states to draw attention */
+}
+.caption, label {
+    color: #f8f8f2; /* Dracula foreground, for text to ensure readability */
+}
+.invalid, .dg-error-list {
+    background-color: #ff5555; /* Dracula red, for errors and warnings to make them highly noticeable */
+}
+.SoftError > .invalid {
+    background-color: #ffb86c; /* Dracula orange, for warnings and notices to differentiate from critical errors */
+}
+.confirmed {
+    background-color: #50fa7b; /* Dracula green, for success messages and buttons to signify go-ahead or okay */
+}
+button[id="delete-section"] {
+    color: #bd93f9; /* Dracula purple, for buttons and links to maintain the theme's color consistency */
+}
