@@ -1,0 +1,40 @@
+name: Update README Badge on Browser Bug Issues
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Update README for Safari Bug
+        if: contains(github.event.issue.labels.*.name, 'Safari')
+        run: |
+          sed -i 's/badge\/Safari-compatible-green.svg/badge\/Safari-issue-red.svg/g' README.md
+
+      - name: Update README for Chrome Bug
+        if: contains(github.event.issue.labels.*.name, 'Chrome')
+        run: |
+          sed -i 's/badge\/Chrome-compatible-green.svg/badge\/Chrome-issue-red.svg/g' README.md
+
+      - name: Update README for Firefox Bug
+        if: contains(github.event.issue.labels.*.name, 'FireFox')
+        run: |
+          sed -i 's/badge\/Firefox-compatible-green.svg/badge\/Firefox-issue-red.svg/g' README.md
+
+      - name: Update README for Edge Bug
+        if: contains(github.event.issue.labels.*.name, 'Edge')
+        run: |
+          sed -i 's/badge\/Edge-compatible-green.svg/badge\/Edge-issue-red.svg/g' README.md
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add README.md
+          git commit -m "Updated README badges for browser bug issues" || exit 0
+          git push
