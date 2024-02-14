@@ -8,7 +8,7 @@
 
 This repository contains a CSS stylesheet designed to enhance the appearance and usability of Grooper DataModels. The stylesheet provides a modern, visually appealing interface that can be easily integrated with any Grooper DataModel.
 
-### Preview with the [TokyoNight](https://github.com/StevenRotelli/GrooperCSS/main/Themes/TokyoNight.css) theme.
+### Preview with the [TokyoNight](https://github.com/StevenRotelli/GrooperCSS/blob/main/Themes/TokyoNight.css) theme.
 ![image](https://github.com/StevenRotelli/GrooperCSS/assets/95944145/16b91ed2-59b8-4729-9ef3-770018c5792c)
 
 ## Usage
