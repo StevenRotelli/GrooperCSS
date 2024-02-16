@@ -54,6 +54,9 @@ hr {
   margin-top: auto;
   order: 1;
 }
+*::placeholder {
+  font-style: italic;
+}
 /* Section and Tables Styling */
 .DataSection,
 .DataTable,
