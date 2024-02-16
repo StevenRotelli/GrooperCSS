@@ -1,12 +1,9 @@
-/*VERSION 1.0.1*/
+/*VERSION 1.0.3*/
 /* Makes data panel full size */
-
 self {
   width: auto !important;
 }
-
 /* DataModel Setup */
-
 .DataModel {
   display: flex;
   flex-wrap: wrap;
@@ -24,10 +21,15 @@ hr {
   display: none;
 }
 .caption {
-  padding-right: 0.5em;
+  margin-bottom: 4px;
+  margin-right: 0px;
+  transform: translate(-8px, -8px);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding-top:8px;
+  padding-left:8px;
   width: 100%;
-  order: 1;
-  margin-right: 0;
+  order: 1; 
 }
 .header {
   margin-right: 100%;
@@ -210,6 +212,16 @@ hr {
   height: 100% !important;
   max-height: fit-content !important;
   overflow-y: hidden;
+}
+.Shy.DataSection > .DataField {
+	width: 100%;
+}
+.Shy.DataSection > .DataField > label {
+	width: fit-content;
+  margin-right: auto;
+}
+.Shy.DataSection > .DataField > input {
+	 margin-right: 8px;
 }
 .Shy {
   width: 100%;
