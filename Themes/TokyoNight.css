@@ -25,12 +25,15 @@ self {
 }
 .invalid, .dg-error-list {
 	background-color: #f7768e; /* Red for errors, warnings */
+	color: #1a1b26; /* Deep blue background */
 }
 .SoftError > .invalid {
 	background-color: #e0af68; /* Yellow for warnings, notices */
+	color: #1a1b26; /* Deep blue background */
 }
 .confirmed {
-	background-color: #9ece6a; /* Green for success messages, buttons */	
+	background-color: #9ece6a; /* Green for success messages, buttons */
+	color: #1a1b26; /* Deep blue background */
 }
 button[id="delete-section"] { color: #7aa2f7; }
 button[id="delete-section"] { 
