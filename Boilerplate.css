@@ -20,7 +20,9 @@ self {
 hr {
   display: none;
 }
-.caption {
+.DataTable > .caption,
+.DataSection > .caption,
+.toolbar {
   margin-bottom: 4px;
   margin-right: 0px;
   transform: translate(-8px, -8px);
@@ -28,8 +30,14 @@ hr {
   border-top-right-radius: 8px;
   padding-top:8px;
   padding-left:8px;
-  width: 100%;
-  order: 1; 
+  width: calc(100% + 8px);
+  order: 1;
+}
+.toolbar {
+	margin-top: 0;
+}
+.toolbar > div > .caption {
+	margin-right:8px;	
 }
 .header {
   margin-right: 100%;
@@ -42,6 +50,7 @@ hr {
 .scroll-container > div:first-child {
   max-height: 1000px !important;
   height: auto !important;
+  flex-grow:0;
 }
 .footer {
   order: 1;
