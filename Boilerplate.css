@@ -1,4 +1,4 @@
-/*VERSION 1.0.3*/
+/*VERSION 1.0.4*/
 /* Makes data panel full size */
 self {
   width: auto !important;
@@ -24,7 +24,7 @@ hr {
 .DataSection > .caption,
 .toolbar {
   margin-bottom: 4px;
-  margin-right: 0px;
+  margin-right: -8px;
   transform: translate(-8px, -8px);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -35,6 +35,9 @@ hr {
 }
 .toolbar {
 	margin-top: 0;
+}
+.DataGridCollection>.toolbar>div:first-child {
+	flex-grow: 0;
 }
 .toolbar > div > .caption {
 	margin-right:8px;	
