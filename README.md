@@ -43,13 +43,13 @@ If you've identified a specific bug and would like to report it, please follow t
    - Go to '...'
    - Click on '....'
    - Scroll down to '....'
-   - See error
+   - See issue
 1. Environment Details: Include details about your environment where the bug was observed, such as the browser version, operating system, and any relevant software or hardware configurations.
 1. Additional Context: Add any other context about the problem here, such as links to related issues, external resources, or possible solutions/workarounds you've identified.
 
 ## Contributing Fixes
 
-If you're interested in contributing a fix for an issue, please see our Contributing Guidelines for more information on how to submit pull requests.
+If you're interested in contributing a fix for an issue, please see Contributing Guidelines for more information on how to submit pull requests.
 We appreciate your contributions to improving GrooperCSS, and we strive to review issues and pull requests promptly. Thank you for helping us make our project better!
 
 ## License
