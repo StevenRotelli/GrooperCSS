@@ -1,7 +1,12 @@
-/*VERSION 1.0.4*/
+/*VERSION 1.0.5*/
+/*https://github.com/StevenRotelli/GrooperCSS/*/
 /* Makes data panel full size */
 self {
   width: auto !important;
+  --soft-err-bg-color:#7f7f27;
+  --soft-err-border-color:#ffcc00;
+  --soft-err-bg-color-lite:#feffbd;
+  --soft-err-border-color-lite:Yellow;
 }
 /* DataModel Setup */
 .DataModel {
@@ -31,6 +36,7 @@ hr {
   padding-top:8px;
   padding-left:8px;
   width: calc(100% + 8px);
+  height:fit-content;
   order: 1;
 }
 .toolbar {
@@ -116,16 +122,16 @@ hr {
   border-color: var(--grp-teal-1);
 }
 /* SPECIAL CLASSES */
-.SoftError > .invalid {
+.SoftError > .invalid, input[title="Confidence is below minimum."],div[title="Confidence is below minimum."] {
   background-color: #7f7f27;
 }
-.SoftError > .invalid:focus-within {
+.SoftError > .invalid:focus-within, input[title="Confidence is below minimum."], div[title="Confidence is below minimum."]{
   border-color: #ffcc00;
 }
-.lite-mode .SoftError > .invalid {
+.lite-mode .SoftError > .invalid, .lite-mode input[title="Confidence is below minimum."], .lite-mode div[title="Confidence is below minimum."] {
   background-color: #feffbd;
 }
-.lite-mode .SoftError > .invalid:focus-within {
+.lite-mode .SoftError > .invalid:focus-within, .lite-mode input[title="Confidence is below minimum."], .lite-mode div[title="Confidence is below minimum."] {
   border-color: Yellow;
 }
 .Secure > Input:hover {
@@ -203,6 +209,9 @@ hr {
 .ThreeFifths {
   flex: 0 0 calc(60% - 8px);
 }
+.FourFifths{
+  flex: 0 0 calc(80% - 8px);
+}
 .OneThird {
   flex: 0 0 calc(33.333% - 8px);
 }
@@ -229,24 +238,23 @@ hr {
   overflow-y: hidden;
 }
 .Shy.DataSection > .DataField {
-	width: 100%;
+	width: calc(100% - 8px);
+	margin-right:8px;
 }
 .Shy.DataSection > .DataField > label {
 	width: fit-content;
   margin-right: auto;
 }
-.Shy.DataSection > .DataField > input {
+.Shy.DataSection > .DataValue {
 	 margin-right: 8px;
 }
 .Shy {
-  width: 100%;
+  width: calc(100% - 8px);
+  margin-right:8px;
 }
 .Shy > label {
   width: fit-content;
   margin-right: auto;
-}
-.Shy > input {
-  margin-right: 8px;
 }
 @font-face {
   font-family: "MesloLGS NF Regular";
