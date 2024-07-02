@@ -1,5 +1,5 @@
-/*VERSION 1.0.5*/
-/*https://github.com/StevenRotelli/GrooperCSS/*/
+/*VERSION 1.0.6*/
+/*https://github.com/StevenRotelli/GrooperCSS*/
 /* Makes data panel full size */
 self {
   width: auto !important;
@@ -187,36 +187,36 @@ hr {
 }
 /* Sizes */
 .Half {
-  flex: 0 0 calc(50% - 8px);
+  flex: 1 0 calc(50% - 8px);
 }
 .Third {
-  flex: 0 0 calc(33.333% - 8px);
+  flex: 1 0 calc(33.333% - 8px);
 }
 .Quarter,
 .OneFourth {
-  flex: 0 0 calc(25% - 8px);
+  flex: 1 0 calc(25% - 8px);
 }
 .ThreeFourths {
-  flex: 0 0 calc(75% - 8px);
+  flex: 1 0 calc(75% - 8px);
 }
 .Fifth,
 .OneFifth {
-  flex: 0 0 calc(20% - 8px);
+  flex: 1 0 calc(20% - 8px);
 }
 .TwoFifths {
-  flex: 0 0 calc(40% - 8px);
+  flex: 1 0 calc(40% - 8px);
 }
 .ThreeFifths {
-  flex: 0 0 calc(60% - 8px);
+  flex: 1 0 calc(60% - 8px);
 }
 .FourFifths{
-  flex: 0 0 calc(80% - 8px);
+  flex: 1 0 calc(80% - 8px);
 }
 .OneThird {
-  flex: 0 0 calc(33.333% - 8px);
+  flex: 1 0 calc(33.333% - 8px);
 }
 .TwoThirds {
-  flex: 0 0 calc(66.666% - 8px);
+  flex: 1 0 calc(66.666% - 8px);
 }
 .Column {
   flex-direction: column;
@@ -232,10 +232,23 @@ hr {
   width: 0;
   margin-right: 100%;
 }
-.AutoSize > .scroll-container > div > table div {
+.AutoHeight > .DataValue {
+	min-height:24px;
   height: 100% !important;
   max-height: fit-content !important;
-  overflow-y: hidden;
+  overflow-y: visible;
+}
+.AutoSize > .scroll-container > div > table div, .AutoHeight > .scroll-container > div > table div {
+	min-height:24px;
+  height: 100% !important;
+  max-height: fit-content !important;
+  overflow-y: visible;
+}
+.AutoHeight > .scroll-container > div > table tbody tr td select {
+	height:100%;
+}
+.AutoSize > .scroll-container > div > table tbody tr td select {
+	height:100%;
 }
 .Shy.DataSection > .DataField {
 	width: calc(100% - 8px);
@@ -280,25 +293,17 @@ button[id="delete-section"] {
   background-color: rgb(105, 205, 180);
 }
 select {
-  position: relative;
-  padding-left: 4px;
+  -webkit-appearance: none; 
+  appearance: none;
+  padding: 2px 4px 2px 4px; /* Adjust padding to make room for the arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M7.41%208.84L12%2013.42L16.59%208.84L18%2010.25L12%2016.25L6%2010.25L7.41%208.84Z%22%20fill%3D%22%23434343%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0px center; /* Position the arrow image */
 }
-select[multiple] {
-  height: 6em;
+/* Hide the arrow in IE */
+select::-ms-expand {
+  display: none;
 }
-select:after {
-  content: "A\25BC";
-  position: absolute;
-  right: 0.5em;
-  top: 50%;
-}
-select::before {
-  content: "B";
-  z-index: 2;
-  top: 30%;
-  margin-top: -3px;
-  height: 0;
-  width: 0;
-  right: 0;
-  pointer-events: none;
+select:hover {
+	border-color: rgb(var(--fg-color-rgb), .35);
 }
