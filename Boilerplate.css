@@ -1,25 +1,84 @@
-/*VERSION 1.0.6*/
+/*VERSION 2.0*/
 /*https://github.com/StevenRotelli/GrooperCSS*/
-/* Makes data panel full size */
-self {
-  width: auto !important;
-  --soft-err-bg-color:#7f7f27;
-  --soft-err-border-color:#ffcc00;
-  --soft-err-bg-color-lite:#feffbd;
-  --soft-err-border-color-lite:Yellow;
+/* Variables */
+self:not(.DataModel) {
+  --gap: 8px;
+  --border-radius: 8px;
+  --horizontal-gap: var(--gap);
+  --vertical-gap: var(--gap);
+  --focus-border-color: var(--grp-teal-1);
+  --soft-err-bg-color: #7f7f27;
+  --soft-err-border-color: #ffcc00;
+  --soft-err-bg-color-lite: #feffbd;
+  --soft-err-border-color-lite: Yellow;
+  --border-color: gray;
+  --border-color-hover: light-grey;
+  --border-color-focus: var(--grp-teal-1);
+  display: flex;
+  flex-direction: column;
+  position: relative !important;
+  overflow: clip !important;
+  float: left !important;
+  height: calc(100% - 1px);
+  margin-bottom: -19px;
+  max-width: 100%;
+  min-width: 100%;
+}
+self:has(.DataModel.NoBorder) .dg-error-list {
+  width: calc(100% - 10px);
+}
+.ContextMenu {
+  position: fixed;
+}
+nav.title-bar {
+  top: 0;
+  position: sticky !important;
+  z-index: 1;
+}
+.dark-mode nav.title-bar {
+  background-color: rgb(30, 30, 30);
+}
+.lite-mode nav.title-bar {
+  background-color: rgb(250, 250, 250);
+}
+.dg-error-list {
+  top: 46px;
+  position: sticky !important;
+  z-index: 1;
+  margin-bottom: 0;
+  border-radius: var(--border-radius);
+  border: 0px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.24);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: fit-content;
+  max-height: 118px;
+  flex-shrink: 0;
+}
+.dg-error-list::-webkit-scrollbar-thumb {
+  background-color: var(--color-danger-border);
+}
+.dg-error-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-danger-fg);
+}
+.dg-error-list::-webkit-scrollbar-thumb:active {
+  background-color: red !important;
 }
 /* DataModel Setup */
 .DataModel {
   display: flex;
   flex-wrap: wrap;
-  transition: flex;
   border: 1px solid gray;
-  border-radius: 8px;
-  padding-top: 8px;
-  padding-left: 8px !important;
+  border-radius: var(--border-radius);
+  padding-top: var(--vertical-gap);
+  padding-left: var(--horizontal-gap) !important;
   margin: 10px;
-  width: auto !important;
-  overflow: none !important;
+  padding-bottom: 0px !important;
+  margin-bottom: var(--vertical-gap);
+  overflow: scroll;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: var(--vertical-gap) !important;
 }
 /* Table Setup */
 hr {
@@ -31,22 +90,25 @@ hr {
   margin-bottom: 4px;
   margin-right: -8px;
   transform: translate(-8px, -8px);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  padding-top:8px;
-  padding-left:8px;
-  width: calc(100% + 8px);
-  height:fit-content;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  padding-top: 8px;
+  padding-left: var(--horizontal-gap);
+  width: calc(100% + var(--horizontal-gap));
+  height: fit-content;
   order: 1;
 }
 .toolbar {
-	margin-top: 0;
+  margin-top: 0;
 }
-.DataGridCollection>.toolbar>div:first-child {
-	flex-grow: 0;
+.DataGridCollection > .toolbar > div:first-child {
+  flex-grow: 0;
+}
+.caption {
+  height: fit-content;
 }
 .toolbar > div > .caption {
-	margin-right:8px;	
+  margin-right: 8px;
 }
 .header {
   margin-right: 100%;
@@ -59,7 +121,7 @@ hr {
 .scroll-container > div:first-child {
   max-height: 1000px !important;
   height: auto !important;
-  flex-grow:0;
+  flex-grow: 0;
 }
 .footer {
   order: 1;
@@ -71,6 +133,9 @@ hr {
   flex-direction: column;
   margin-top: auto;
   order: 1;
+}
+.DataValue {
+  transition: background-color 0.2s ease-in-out;
 }
 *::placeholder {
   font-style: italic;
@@ -84,14 +149,13 @@ hr {
   flex-basis: 100%;
   flex-grow: 0;
   flex-shrink: 1;
-  transition: flex;
   padding: 8px;
   padding-right: 0px;
   margin: 8px;
   margin-left: 0px;
   width: auto;
   border: 1px solid gray;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   order: 1;
 }
 /* Correct flex properties just for tables */
@@ -113,25 +177,33 @@ hr {
 .DataSection:hover,
 .DataTable:hover,
 .DataGridCollection:hover {
-  border-color: lightgray;
+  border-color: var(--border-color-hover);
 }
 /* Sets focus color */
 .DataSection:focus-within,
 .DataTable:focus-within,
 .DataGridCollection:focus-within {
-  border-color: var(--grp-teal-1);
+  border-color: var(--border-color-focus);
 }
 /* SPECIAL CLASSES */
-.SoftError > .invalid, input[title="Confidence is below minimum."],div[title="Confidence is below minimum."] {
-  background-color: #7f7f27;
+.SoftError > .invalid,
+input[title="Confidence is below minimum."],
+div[title="Confidence is below minimum."] {
+  background-color: var(--soft-err-bg-color);
 }
-.SoftError > .invalid:focus-within, input[title="Confidence is below minimum."], div[title="Confidence is below minimum."]{
-  border-color: #ffcc00;
+.SoftError > .invalid:focus-within,
+input[title="Confidence is below minimum."],
+div[title="Confidence is below minimum."] {
+  border-color: var(--soft-err-border-color);
 }
-.lite-mode .SoftError > .invalid, .lite-mode input[title="Confidence is below minimum."], .lite-mode div[title="Confidence is below minimum."] {
-  background-color: #feffbd;
+.lite-mode .SoftError > .invalid,
+.lite-mode input[title="Confidence is below minimum."],
+.lite-mode div[title="Confidence is below minimum."] {
+  background-color: var(--soft-err-bg-color-lite);
 }
-.lite-mode .SoftError > .invalid:focus-within, .lite-mode input[title="Confidence is below minimum."], .lite-mode div[title="Confidence is below minimum."] {
+.lite-mode .SoftError > .invalid:focus-within,
+.lite-mode input[title="Confidence is below minimum."],
+.lite-mode div[title="Confidence is below minimum."] {
   border-color: Yellow;
 }
 .Secure > Input:hover {
@@ -185,38 +257,52 @@ hr {
   margin-right: 0px;
   background-color: transparent;
 }
+.Border.DataField {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding-left: var(--horizontal-gap);
+  margin-top: var(--vertical-gap);
+  margin-bottom: var(--vertical-gap);
+  padding-top: var(--vertical-gap);
+}
+.Border.DataField:hover {
+  border-color: var(--border-color-hover);
+}
+.Border.DataField:focus-within {
+  border-color: var(--border-color-focus);
+}
 /* Sizes */
 .Half {
-  flex: 1 0 calc(50% - 8px);
+  flex: 1 0 calc(50% - var(--horizontal-gap));
 }
 .Third {
-  flex: 1 0 calc(33.333% - 8px);
+  flex: 1 0 calc(33.333% - var(--horizontal-gap));
 }
 .Quarter,
 .OneFourth {
-  flex: 1 0 calc(25% - 8px);
+  flex: 1 0 calc(25% - var(--horizontal-gap));
 }
 .ThreeFourths {
-  flex: 1 0 calc(75% - 8px);
+  flex: 1 0 calc(75% - var(--horizontal-gap));
 }
 .Fifth,
 .OneFifth {
-  flex: 1 0 calc(20% - 8px);
+  flex: 1 0 calc(20% - var(--horizontal-gap));
 }
 .TwoFifths {
-  flex: 1 0 calc(40% - 8px);
+  flex: 1 0 calc(40% - var(--horizontal-gap));
 }
 .ThreeFifths {
-  flex: 1 0 calc(60% - 8px);
+  flex: 1 0 calc(60% - var(--horizontal-gap));
 }
-.FourFifths{
-  flex: 1 0 calc(80% - 8px);
+.FourFifths {
+  flex: 1 0 calc(80% - var(--horizontal-gap));
 }
 .OneThird {
-  flex: 1 0 calc(33.333% - 8px);
+  flex: 1 0 calc(33.333% - var(--horizontal-gap));
 }
 .TwoThirds {
-  flex: 1 0 calc(66.666% - 8px);
+  flex: 1 0 calc(66.666% - var(--horizontal-gap));
 }
 .Column {
   flex-direction: column;
@@ -233,37 +319,38 @@ hr {
   margin-right: 100%;
 }
 .AutoHeight > .DataValue {
-	min-height:24px;
+  min-height: 24px;
   height: 100% !important;
   max-height: fit-content !important;
   overflow-y: visible;
 }
-.AutoSize > .scroll-container > div > table div, .AutoHeight > .scroll-container > div > table div {
-	min-height:24px;
+.AutoSize > .scroll-container > div > table div,
+.AutoHeight > .scroll-container > div > table div {
+  min-height: 24px;
   height: 100% !important;
   max-height: fit-content !important;
   overflow-y: visible;
 }
 .AutoHeight > .scroll-container > div > table tbody tr td select {
-	height:100%;
+  height: 100%;
 }
 .AutoSize > .scroll-container > div > table tbody tr td select {
-	height:100%;
+  height: 100%;
 }
 .Shy.DataSection > .DataField {
-	width: calc(100% - 8px);
-	margin-right:8px;
+  width: calc(100% - 8px);
+  margin-right: 8px;
 }
 .Shy.DataSection > .DataField > label {
-	width: fit-content;
+  width: fit-content;
   margin-right: auto;
 }
 .Shy.DataSection > .DataValue {
-	 margin-right: 8px;
+  margin-right: 8px;
 }
 .Shy {
   width: calc(100% - 8px);
-  margin-right:8px;
+  margin-right: 8px;
 }
 .Shy > label {
   width: fit-content;
@@ -271,7 +358,7 @@ hr {
 }
 @font-face {
   font-family: "MesloLGS NF Regular";
-  src: url("../Fonts/MesloLGS-NF-Regular.ttf") format("truetype");
+  src: url("../Fonts/MesloLGS-NF-Regular.ttf") format("truetype"); /*https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf*/
 }
 /* in progress */
 .Icon {
@@ -293,10 +380,10 @@ button[id="delete-section"] {
   background-color: rgb(105, 205, 180);
 }
 select {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
   padding: 2px 4px 2px 4px; /* Adjust padding to make room for the arrow */
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M7.41%208.84L12%2013.42L16.59%208.84L18%2010.25L12%2016.25L6%2010.25L7.41%208.84Z%22%20fill%3D%22%23434343%22/%3E%3C/svg%3E');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M7.41%208.84L12%2013.42L16.59%208.84L18%2010.25L12%2016.25L6%2010.25L7.41%208.84Z%22%20fill%3D%22%23434343%22/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0px center; /* Position the arrow image */
 }
@@ -305,5 +392,5 @@ select::-ms-expand {
   display: none;
 }
 select:hover {
-	border-color: rgb(var(--fg-color-rgb), .35);
+  border-color: rgb(var(--fg-color-rgb), 0.35);
 }
