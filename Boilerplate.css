@@ -1,6 +1,12 @@
-/*VERSION 2.0*/
-/*https://github.com/StevenRotelli/GrooperCSS*/
-/* Variables */
+/********************************************************************
+ *                                                                  *
+ *                            VERSION 2.0                           *
+ *                                                                  *
+ *          https://github.com/StevenRotelli/GrooperCSS             *
+ *                                                                  *
+ *                     Last Updated: 12-03-2024                     *
+ *                                                                  *
+ ********************************************************************/
 self:not(.DataModel) {
   --gap: 8px;
   --border-radius: 8px;
@@ -23,6 +29,10 @@ self:not(.DataModel) {
   margin-bottom: -19px;
   max-width: 100%;
   min-width: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 self:has(.DataModel.NoBorder) .dg-error-list {
   width: calc(100% - 10px);
@@ -187,33 +197,46 @@ hr {
 }
 /* SPECIAL CLASSES */
 .SoftError > .invalid,
-input[title="Confidence is below minimum."],
+.DataValue[title*="Confidence is below minimum."].invalid,
 div[title="Confidence is below minimum."] {
   background-color: var(--soft-err-bg-color);
 }
 .SoftError > .invalid:focus-within,
-input[title="Confidence is below minimum."],
+.DataValue[title*="Confidence is below minimum."].invalid:focus-within,
 div[title="Confidence is below minimum."] {
   border-color: var(--soft-err-border-color);
+  background-color: var(--soft-err-bg-color) !important;
 }
 .lite-mode .SoftError > .invalid,
-.lite-mode input[title="Confidence is below minimum."],
+.lite-mode .DataValue[title*="Confidence is below minimum."],
 .lite-mode div[title="Confidence is below minimum."] {
   background-color: var(--soft-err-bg-color-lite);
 }
 .lite-mode .SoftError > .invalid:focus-within,
-.lite-mode input[title="Confidence is below minimum."],
+.lite-mode .DataValue[title*="Confidence is below minimum."],
 .lite-mode div[title="Confidence is below minimum."] {
   border-color: Yellow;
 }
-.Secure > Input:hover {
+.Blur > Input:hover {
   filter: blur(3px);
 }
-.Secure > Input:focus-within {
+.Blur > Input:focus-within {
   filter: none;
 }
-.Secure > Input:not(focus-within) {
+.Blur > Input:not(focus-within) {
   filter: blur(3px);
+}
+.Secure > Input:hover {
+  -webkit-text-security: disc;
+  -moz-text-security: disc;
+}
+.Secure > Input:focus-within {
+  -webkit-text-security: none;
+  -moz-text-security: none;
+}
+.Secure > Input:not(focus-within) {
+  -webkit-text-security: disc;
+  -moz-text-security: disc;
 }
 .Banner > label {
   display: none;
